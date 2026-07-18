@@ -5,7 +5,7 @@ This app provides a local torrent streaming backend for **Stremio Stream Bridge*
 ## Installation
 
 1. Add this repository to the Home Assistant app store:
-   `https://github.com/diegocesaretti/stremio-stream-engine-ha`
+   `https://github.com/diegocesaretti/stream-server-home-assistant`
 2. Install **Stremio Stream Engine**.
 3. Keep TCP port `11470` mapped to `11470`.
 4. Start the app and enable **Start on boot** and **Watchdog**.

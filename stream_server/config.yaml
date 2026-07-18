@@ -3,7 +3,7 @@ version: "0.1.0"
 slug: stremio_stream_engine
 description: >-
   Local Stremio-compatible torrent streaming engine for Stremio Stream Bridge.
-url: https://github.com/diegocesaretti/stremio-stream-engine-ha
+url: https://github.com/diegocesaretti/stream-server-home-assistant
 arch:
   - aarch64
   - amd64

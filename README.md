@@ -2,14 +2,14 @@
 
 Home Assistant app repository for running the open-source [`perpetus/stream-server`](https://github.com/perpetus/stream-server) engine locally on Home Assistant OS or Supervised installations.
 
-The app exposes a Stremio-compatible HTTP API on port `11470` for use with the separate [`Stremio Stream Bridge`](https://github.com/diegocesaretti/stream-server-ha) custom integration.
+The app exposes a Stremio-compatible HTTP API on port `11470` for use with the separate [`Stremio Stream Bridge`](https://github.com/diegocesaretti/stremio-stream-bridge) custom integration.
 
 ## Installation
 
 Add this repository in the Home Assistant app store:
 
 ```text
-https://github.com/diegocesaretti/stremio-stream-engine-ha
+https://github.com/diegocesaretti/stream-server-home-assistant
 ```
 
 Then install **Stremio Stream Engine**, start it, and configure Stremio Stream Bridge to use:
