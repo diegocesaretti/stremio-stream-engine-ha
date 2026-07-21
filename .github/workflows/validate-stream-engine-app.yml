@@ -167,7 +167,7 @@ jobs:
           exit 1
 
       - name: Log in to GitHub Container Registry
-        if: github.event_name != 'pull_request' && steps.smoke_test.outcome == 'success'
+        if: github.ref == 'refs/heads/main' && steps.smoke_test.outcome == 'success'
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
@@ -175,7 +175,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Push architecture image
-        if: github.event_name != 'pull_request' && steps.smoke_test.outcome == 'success'
+        if: github.ref == 'refs/heads/main' && steps.smoke_test.outcome == 'success'
         shell: bash
         run: |
           REMOTE_IMAGE="${REGISTRY}/${IMAGE_NAME}:${{ steps.metadata.outputs.version }}-${{ matrix.arch }}"
@@ -185,7 +185,7 @@ jobs:
   manifest:
     name: Publish multi-architecture manifest
     needs: build
-    if: github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
